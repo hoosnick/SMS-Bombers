@@ -7,17 +7,26 @@
   <tr>
     <th>№</th>
     <th>Fayl</th>
+    <th>Abonent</th>
     <th>Status</th>
   </tr>
   <tr>
     <td>1</td>
     <td><a href='https://github.com/hoosnick/SMS-Bombers/blob/main/Bombers/oqtepa_lavash.py'>oqtepa_lavash.py</a></td>
-    <td>active</td>
+    <td>Hamma</td>
+    <td>✅</td>
   </tr>
   <tr>
     <td>2</td>
     <td><a href='https://github.com/hoosnick/SMS-Bombers/blob/main/Bombers/tashkent.py'>tashkent.py</a></td>
-    <td>coming soon!</td>
+    <td>Hamma</td>
+    <td>✅</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td><a href='https://github.com/hoosnick/SMS-Bombers/blob/main/Bombers/beeline.py'>beeline.py</a></td>
+    <td>Beeline</td>
+    <td>❌</td>
   </tr>
 </table>
 
@@ -28,11 +37,19 @@
 - `pip install -r requirements.txt`
 ***
 ## Foydalanish
-Menu orqali foydalanish (noob):
-- `python(3) main.py`
-
-Fayldan (advanced):
 - `cd Bombers`
-- `python(3) fayl_nomi.py`
+- `python(3) bomber_nomi.py`
 ***
-.....
+## Bomber qo'shish
+- Repositoryni fork qiling.
+- Bomberingizni [bomberlar](https://github.com/hoosnick/SMS-Bombers/tree/main/Bombers)dagi shablon bo'yicha yozing.
+- Pull Request yuboring.
+***
+### P.S.: Repodagi bomberlar yurtimiz saytlaridan yasalgan, aksariyatini ko'rib na yig'lashingizni na kulishingizni bilasiz, Backend Devlar yo'l qo'ygan xatoliklar sababli ochilib qolgan backdoorlar sayt egalariga moliyaviy xarajatga olib kelmoqda. Ma'lumot o'rnida, SMS-shlyuzlar har bir sms donasiga 80 so'm(men bilgan eng arzoni)dan oladi.
+### [www.tashkent.uz](https://www.tashkent.uz/uz/virtual) - Toshkent shahar hokimligi rasmiy-veb saytida ahvol juda yomon, virtual qabulxonasiga o'tib murojaatingizni ha mayli shirin tilaklaringizni istalgan odamning o'rnidan bildirsangiz bo'ladi :)
+### Chunki nomer yozib, tasdiqlash kodini responsedan olishingiz mumkin:
+<img src='https://i.imgur.com/Ev94T3X.jpg'>
+<img src='https://i.imgur.com/wNfpAWO.jpg'>
+
+***
+*Faqat takliflar bo'yicha:* [@hoosnick](https://t.me/hoosnick)
