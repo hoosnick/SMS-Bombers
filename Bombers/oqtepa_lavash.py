@@ -1,5 +1,3 @@
-import sys
-
 import requests, lxml
 from bs4 import BeautifulSoup
 
@@ -7,13 +5,13 @@ import time
 import random
 
 import re
-from typing import Union
 
 from utils import (random_user_agent, random_names)
-from utils import (FormattingOptions, stars, banner)
-from utils import (clear_terminal, error_handler)
+from utils import (FormattingOptions, main_menu)
+from utils import (clear_terminal, super_input)
 
 fo = FormattingOptions()
+session = requests.session()
 
 
 class OqtepaLavashBomber:
@@ -56,39 +54,6 @@ class OqtepaLavashBomber:
         soup = BeautifulSoup(response.content, 'lxml')
         self.shipper_code = self._shipper_code(soup)
         self.headers['Shipper'] = self.shipper_code
-
-    def _input(self, **kwargs) -> Union[str, int, None]:
-        i = None
-        while True:
-            try:
-                value = input(kwargs['text'])
-                if value.lower() in ['exit', 'back', 'orqaga', 'quit']:
-                    sys.exit()
-                if kwargs['phone']:
-                    num = value
-                    i = num.replace('+998', '') \
-                        if num.startswith('+998') \
-                        else num
-                    if i.isdigit() and len(i) == 9:
-                        break
-                    print(fo._(fo.FAIL, "Xato kiritildi!"))
-                    continue
-                elif kwargs['amount']:
-                    amount = int(value)
-                    i = amount \
-                        if amount <= 1000 and amount >= 10 \
-                        else 10
-                    break
-            except ValueError:
-                print(fo._(fo.FAIL, "Faqat son yozish kerak!"))
-                continue
-            except Exception as e:
-                print('Siz ssenariyda bo\'lmagan xatolikka yo\'l qo\'ydingiz.\n'
-                      'Ana endi mana bu xatolikni tarjima qilib, to\'g\'ri javob bering!\n'
-                      f'{e}')
-                break
-
-        return i
 
     def _is_already_exists(self, url) -> bool:
         r = self.sess.post(
@@ -133,42 +98,22 @@ class OqtepaLavashBomber:
             print(fo._(fo.BOLD, '\nTugadi :)\n'))
 
 
-def main():
-    clear_terminal()
-    print(banner('Musaffo SKY'))
-    print(
-        f'{fo.BOLD}Salom, Foydalanuvchi!{fo.ENDC}\n\n'
-        'Skript faqat tanishtiruv hamda ta\'lim maqsadlarida edi!\n'
-        'Ushbu bilan bog\'liq har qanday faoliyat faqat sizning javobgarligingizdir!\n'
-        f'{fo.WARNING}\nMax. 1000ta va min. 10ta SMS donasini sonda belgilash mumkin.\n'
-        f'1000dan oshiq son kiritilsa avtomatik 10ga tenglanadi!\n{fo.ENDC}'
-        f'\n{fo.BOLD}{fo.UNDERLINE}2022 (c) hoosnick{fo.ENDC}\n'
-    )
-    print(fo._(fo.BOLD, "Chiqish uchun [Ctrl]+[C] kombinatsiyasini bosing!\n"))
-    
-    session = requests.session()
-    olbomb = OqtepaLavashBomber(session)
-
-    while True:
-        try:
-            phone = olbomb._input(
-                text=fo._(fo.OKBLUE, 'Telefon raqamni (+998)siz kiriting (namuna: 991234567)\n> '),
-                phone=True, amount=False)
-            amount = olbomb._input(
-                text=fo._(fo.OKBLUE, 'Nechta SMS borishini istaysiz? (max: 1000)\n> '),
-                phone=False, amount=True)
-            
-            if all([elem is None for elem in [phone, amount]]):
-                print(fo._(fo.FAIL, 'Ma\'lumotlar xato kiritildi!'))
-                continue
-            olbomb.start_bombing(phone, amount)
-        except KeyboardInterrupt:
-            clear_terminal()
-            break
-        except Exception as e:
-            print(fo._(fo.FAIL, f'Qanaqadir noma\'lum, g\'alati xatolik yuz berdi!\n{e}'))
-            break
-
-
-if __name__ == '__main__':
-    main()
+main_menu()
+olbomb = OqtepaLavashBomber(session)
+while True:
+    try:
+        phone = super_input(
+            text=fo._(fo.OKBLUE, 'Telefon raqamni (+998)siz kiriting (namuna: 991234567)\n> '),
+            phone=True, amount=False)
+        amount = super_input(
+            text=fo._(fo.OKBLUE, 'Nechta SMS borishini istaysiz? (max: 1000)\n> '),
+            phone=False, amount=True)
+        
+        if all([elem is None for elem in [phone, amount]]):
+            print(fo._(fo.FAIL, 'Ma\'lumotlar xato kiritildi!')); continue
+        
+        olbomb.start_bombing(phone, amount)
+    except KeyboardInterrupt:
+        clear_terminal(); break
+    except Exception as e:
+        print(fo._(fo.FAIL, f'Qanaqadir noma\'lum, g\'alati xatolik yuz berdi!\n{e}')); break
