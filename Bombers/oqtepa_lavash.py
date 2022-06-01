@@ -151,15 +151,12 @@ def main():
 
     while True:
         try:
-            stars(20)
             phone = olbomb._input(
                 text=fo._(fo.OKBLUE, 'Telefon raqamni (+998)siz kiriting (namuna: 991234567)\n> '),
                 phone=True, amount=False)
-            
             amount = olbomb._input(
                 text=fo._(fo.OKBLUE, 'Nechta SMS borishini istaysiz? (max: 1000)\n> '),
                 phone=False, amount=True)
-            stars(20)
             
             if all([elem is None for elem in [phone, amount]]):
                 print(fo._(fo.FAIL, 'Ma\'lumotlar xato kiritildi!'))
