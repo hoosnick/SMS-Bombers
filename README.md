@@ -11,12 +11,12 @@
   </tr>
   <tr>
     <td>1</td>
-    <td>oqtepa_lavash.py</td>
+    <td><a href='https://github.com/hoosnick/SMS-Bombers/blob/main/Bombers/oqtepa_lavash.py'>oqtepa_lavash.py</a></td>
     <td>active</td>
   </tr>
   <tr>
     <td>2</td>
-    <td>tashkent.py</td>
+    <td><a href='https://github.com/hoosnick/SMS-Bombers/blob/main/Bombers/tashkent.py'>tashkent.py</a></td>
     <td>coming soon!</td>
   </tr>
 </table>
