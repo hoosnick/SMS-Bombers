@@ -16,9 +16,7 @@ class FormattingOptions:
     def _(self, format: str, text: str):
         return format + text + self.ENDC
 
-
 def stars(n: int, s: int = 0): return (' '*s).join(['*' for _ in range(n)]) # line
-
 
 LIST_OF_BANNERS = [
     """
@@ -54,3 +52,16 @@ ___] |  | ___]    ___] |    |  | |  | |  | |___ |  \
 def banner(r: str): return random.choice(LIST_OF_BANNERS).format(r) # random banner
 
 ">> https://www.youtube.com/watch?v=VeUlxU2qXDk <<"
+
+fo = FormattingOptions()
+
+def main_menu(): # text
+    from .functions import clear_terminal
+    
+    clear_terminal()
+    print(banner('Musaffo SKY'))
+    print(
+        f'{fo.WARNING}\nMax. 1000ta va min. 10ta SMS donasini sonda belgilash mumkin.\n'
+        f'1000dan oshiq son kiritilsa avtomatik 10ga tenglanadi!\n{fo.ENDC}'
+    )
+    print(fo._(fo.BOLD, "Chiqish uchun exit/quit yoki [Ctrl]+[C] kombinatsiyasini kiriting!\n"))
