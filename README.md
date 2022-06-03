@@ -53,6 +53,6 @@ Chunki nomer yozib, tasdiqlash kodini responsedan olishingiz mumkin:
 
 ***
 ## Maslahat
-### Hurmatli Backend Devlar sms-registration qismiga yaxshi e'tibor beraylik, bunda har bir sms orasida kamida 30 sekund yoki 1 daqiqa timeoutlar berishni tavsiya qilaman. Faqat va faqat backendda tekshirishingizni so'rayman!
+Hurmatli Backend Devlar sms-registration qismiga yaxshi e'tibor beraylik, bunda har bir sms orasida kamida 30 sekund yoki 1 daqiqa timeoutlar berishni tavsiya qilaman. Faqat va faqat backendda tekshirishingizni so'rayman!
 ***
 *Faqat takliflar bo'yicha:* [@hoosnick](https://t.me/hoosnick)
