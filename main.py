@@ -1,6 +1,6 @@
 import requests
 
-from Bombers import TashkentBomber, OqtepaLavashBomber
+from Bombers import *
 from Bombers.utils import (clear_terminal, main_menu)
 from Bombers.utils import FormattingOptions, super_input
 
@@ -11,7 +11,8 @@ session = requests.session()
 def dict_of_bombers():
     return {
         1 : OqtepaLavashBomber,
-        2 : TashkentBomber
+        2 : TashkentBomber,
+        3 : BeelineBomber
     }
 
 
