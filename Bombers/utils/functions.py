@@ -10,10 +10,8 @@ from typing import Union
 
 ua = UserAgent()
 
-
 def clear_terminal() -> int:
     os.system("cls") if platform.system().lower() == "windows" else os.system("clear")
-
 
 def random_names() -> str:
     return random.choice(
@@ -27,14 +25,11 @@ def random_names() -> str:
         ]
     )
 
-
 def random_user_agent() -> str:
     return ua.random
 
-
 def all_bombers() -> list:
-    return [f for f in os.listdir('Bombers/') if f.endswith(".py")]
-
+    return [f for f in os.listdir('Bombers/') if f.endswith(".py") and f != '__init__.py']
 
 def super_input(**kwargs) -> Union[str, int, None]:
     from .decorations import FormattingOptions
@@ -62,6 +57,12 @@ def super_input(**kwargs) -> Union[str, int, None]:
                     if amount <= 1000 and amount >= 10 \
                     else 10
                 break
+            elif kwargs['int_']:
+                if value.isdigit() and int(value) > 0 and int(value) <= len(all_bombers()):
+                    i = int(value)
+                    break
+                print(fo._(fo.FAIL, "Xato kiritildi!"))
+                continue
         except ValueError:
             print(fo._(fo.FAIL, "Faqat son yozish kerak!")); continue
         except Exception as e:
