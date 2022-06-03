@@ -44,9 +44,10 @@
 - Bomberingizni [bomberlar](https://github.com/hoosnick/SMS-Bombers/tree/main/Bombers)dagi shablon bo'yicha yozing.
 - Pull Request yuboring.
 ***
-### P.S.: Repodagi bomberlar yurtimiz saytlaridan yasalgan, aksariyatini ko'rib na yig'lashingizni na kulishingizni bilasiz, Backend Devlar yo'l qo'ygan xatoliklar sababli ochilib qolgan backdoorlar sayt egalariga moliyaviy xarajatga olib kelmoqda. Ma'lumot o'rnida, SMS-shlyuzlar har bir sms donasiga 80 so'm(men bilgan eng arzoni)dan oladi.
-### [www.tashkent.uz](https://www.tashkent.uz/uz/virtual) - Toshkent shahar hokimligi rasmiy-veb saytida ahvol juda yomon, virtual qabulxonasiga o'tib murojaatingizni ha mayli shirin tilaklaringizni istalgan odamning o'rnidan bildirsangiz bo'ladi :)
-### Chunki nomer yozib, tasdiqlash kodini responsedan olishingiz mumkin:
+## PostScript
+- Repodagi bomberlar yurtimiz saytlaridan yasalgan, aksariyatini ko'rib na yig'lashingizni na kulishingizni bilasiz, Backend Devlar yo'l qo'ygan xatoliklar sababli ochilib qolgan backdoorlar sayt egalariga moliyaviy xarajatga olib kelmoqda. Ma'lumot o'rnida, SMS-shlyuzlar har bir sms donasiga 80 so'm(men bilgan eng arzoni)dan oladi.<p>
+- [www.tashkent.uz](https://www.tashkent.uz/uz/virtual) - Toshkent shahar hokimligi rasmiy-veb saytida ahvol juda yomon, virtual qabulxonasiga o'tib murojaatingizni ha mayli shirin tilaklaringizni istalgan odamning o'rnidan bildirsangiz bo'ladi :)<p>
+Chunki nomer yozib, tasdiqlash kodini responsedan olishingiz mumkin:
 <img src='https://i.imgur.com/Ev94T3X.jpg'>
 <img src='https://i.imgur.com/wNfpAWO.jpg'>
 
