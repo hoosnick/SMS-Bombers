@@ -26,7 +26,7 @@
     <td>3</td>
     <td><a href='https://github.com/hoosnick/SMS-Bombers/blob/main/Bombers/beeline.py'>beeline.py</a></td>
     <td>Beeline</td>
-    <td>❌</td>
+    <td>✅</td>
   </tr>
 </table>
 
