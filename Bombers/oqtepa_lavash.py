@@ -6,13 +6,10 @@ import random
 
 import re
 
-from utils import (random_user_agent, random_names)
-from utils import (FormattingOptions, main_menu)
-from utils import (clear_terminal, super_input)
+from .utils import (random_user_agent, random_names)
+from .utils import FormattingOptions
 
 fo = FormattingOptions()
-session = requests.session()
-
 
 class OqtepaLavashBomber:
     def __init__(self, session: requests.Session) -> None:
@@ -96,24 +93,3 @@ class OqtepaLavashBomber:
             time.sleep(random.choice([1, 2, 0.5]))
         else:
             print(fo._(fo.BOLD, '\nTugadi :)\n'))
-
-
-main_menu()
-olbomb = OqtepaLavashBomber(session)
-while True:
-    try:
-        phone = super_input(
-            text=fo._(fo.OKBLUE, 'Telefon raqamni (+998)siz kiriting (namuna: 991234567)\n> '),
-            phone=True, amount=False)
-        amount = super_input(
-            text=fo._(fo.OKBLUE, 'Nechta SMS borishini istaysiz? (max: 1000)\n> '),
-            phone=False, amount=True)
-        
-        if all([elem is None for elem in [phone, amount]]):
-            print(fo._(fo.FAIL, 'Ma\'lumotlar xato kiritildi!')); continue
-        
-        olbomb.start_bombing(phone, amount)
-    except KeyboardInterrupt:
-        clear_terminal(); break
-    except Exception as e:
-        print(fo._(fo.FAIL, f'Qanaqadir noma\'lum, g\'alati xatolik yuz berdi!\n{e}')); break
