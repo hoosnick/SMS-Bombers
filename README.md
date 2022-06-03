@@ -37,8 +37,7 @@
 - `pip install -r requirements.txt`
 ***
 ## Foydalanish
-- `cd Bombers`
-- `python(3) bomber_nomi.py`
+- `python(3) main.py`
 ***
 ## Bomber qo'shish
 - Repositoryni fork qiling.
