@@ -35,8 +35,8 @@ def main():
             
             if all([elem is None for elem in [phone, amount]]):
                 print(fo._(fo.FAIL, 'Ma\'lumotlar xato kiritildi!')); continue
+                
             bomber = dict_of_bombers()[bomber](session)
-            # print(bomber, phone, amount)
             bomber.start_bombing(phone, amount)
         except KeyboardInterrupt:
             clear_terminal(); break

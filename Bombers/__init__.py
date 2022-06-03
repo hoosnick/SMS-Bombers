@@ -1,2 +1,2 @@
-from .oqtepa_lavash import *
-from .tashkent import *
+from .oqtepa_lavash import OqtepaLavashBomber
+from .tashkent import TashkentBomber
