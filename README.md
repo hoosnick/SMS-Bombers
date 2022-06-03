@@ -38,6 +38,7 @@
 ***
 ## Foydalanish
 - `python(3) main.py`
+<img src='https://i.imgur.com/bLDIEH3.jpg'>
 ***
 ## Bomber qo'shish
 - Repositoryni fork qiling.
