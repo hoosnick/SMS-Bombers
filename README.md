@@ -37,7 +37,7 @@
     <td>Timeout yo'q</td>
   </tr>
   <tr>
-    <td>3</td>
+    <td>4</td>
     <td><a href='https://abad.uz'>abad.uz</a></td>
     <td><a href='https://github.com/hoosnick/SMS-Bombers/blob/main/Bombers/abaduz.py'>abaduz.py</a></td>
     <td>Hamma</td>
