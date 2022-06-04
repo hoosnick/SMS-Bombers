@@ -6,27 +6,43 @@
 <table>
   <tr>
     <th>№</th>
-    <th>Fayl</th>
+    <th>Sayt</th>
+    <th>Kod</th>
     <th>Abonent</th>
     <th>Status</th>
+    <th>Muammo</th>
   </tr>
   <tr>
     <td>1</td>
+    <td><a href='https://oqtepalavash.uz'>oqtepalavash.uz</a></td>
     <td><a href='https://github.com/hoosnick/SMS-Bombers/blob/main/Bombers/oqtepa_lavash.py'>oqtepa_lavash.py</a></td>
     <td>Hamma</td>
     <td>✅</td>
+    <td>Timeout yo'q</td>
   </tr>
   <tr>
     <td>2</td>
+    <td><a href='https://tashkent.uz'>tashkent.uz</a></td>
     <td><a href='https://github.com/hoosnick/SMS-Bombers/blob/main/Bombers/tashkent.py'>tashkent.py</a></td>
     <td>Hamma</td>
     <td>✅</td>
+    <td><a href='https://github.com/hoosnick/SMS-Bombers#postscript'>Kod yashirin emas</a></td>
   </tr>
   <tr>
     <td>3</td>
+    <td><a href='https://beeline.uz'>beeline.uz</a></td>
     <td><a href='https://github.com/hoosnick/SMS-Bombers/blob/main/Bombers/beeline.py'>beeline.py</a></td>
     <td>Beeline</td>
     <td>✅</td>
+    <td>Timeout yo'q</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td><a href='https://abad.uz'>abad.uz</a></td>
+    <td><a href='https://github.com/hoosnick/SMS-Bombers/blob/main/Bombers/abaduz.py'>abaduz.py</a></td>
+    <td>Hamma</td>
+    <td>✅</td>
+    <td>-</td>
   </tr>
 </table>
 
