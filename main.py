@@ -12,7 +12,8 @@ def dict_of_bombers():
     return {
         1 : OqtepaLavashBomber,
         2 : TashkentBomber,
-        3 : BeelineBomber
+        3 : BeelineBomber,
+        4 : AbadUzBomber,
     }
 
 
